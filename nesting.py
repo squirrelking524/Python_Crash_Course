@@ -1,5 +1,5 @@
 # Storing dictionaries inside of a list
-
+'''
 alycia = {'first_name': 'Alycia', 'last_name': 'Smith', 'age': '34', 'city': 'Columbus'}
 
 larry = {'first_name': 'Larry', 'last_name': 'Parks', 'age': '22', 'city': 'Columbus'}
@@ -14,7 +14,7 @@ for person in people:
     print(f"\nFullname: {full_name.title()}")
     print(f"Age: {person['age']}")
     print(f"Birthplace: {person['city']}")
-
+'''
 
 # Storing dictionaries inside of list for pets
 '''
@@ -41,3 +41,14 @@ favorite_places = {
 for person,place in favorite_places.items():
     print(f"{person.title()}'s favorite place is {' and '.join(place)}.")
     '''
+
+fav_nums = {
+    'Larry': ['69', '89'],
+    'David': ['7', '19'], 
+    'Alycia': '19', 
+    'Nora': '8', 
+    'Emebet': '28'
+}
+
+for person, nums in fav_nums.items():
+    print(f"\n{person}'s favorite numbers are {' and '.join(nums)}")
