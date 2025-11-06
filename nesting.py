@@ -1,4 +1,4 @@
-# Storing dictionaries inside of a list
+# 6-7 Storing dictionaries inside of a list
 '''
 alycia = {'first_name': 'Alycia', 'last_name': 'Smith', 'age': '34', 'city': 'Columbus'}
 
@@ -16,7 +16,7 @@ for person in people:
     print(f"Birthplace: {person['city']}")
 '''
 
-# Storing dictionaries inside of list for pets
+# 6-8 Storing dictionaries inside of list for pets
 '''
 dakota = {'owner': 'dave smith', 'kind': 'dog', 'pet_name': 'dakota'}
 
@@ -30,7 +30,7 @@ for pet in pets:
     print(pet)
     '''
 '''
-# Dicitionary for favorite places
+# 6-9 Dicitionary for favorite places
 
 favorite_places = {
     'jason':['italy', 'rome'],
@@ -42,6 +42,8 @@ for person,place in favorite_places.items():
     print(f"{person.title()}'s favorite place is {' and '.join(place)}.")
     '''
 
+# 6-10 Printed mulitiple favorite numbers for different people
+'''
 fav_nums = {
     'Larry': ['69', '89'],
     'David': ['7', '19'], 
@@ -52,3 +54,25 @@ fav_nums = {
 
 for person, nums in fav_nums.items():
     print(f"\n{person}'s favorite numbers are {' and '.join(nums)}")
+'''
+
+# 6-11 Cities and their info 
+
+cities = {
+    'columbus': {
+        'state': 'ohio',
+        'population': '2,358',
+        'govenor': 'dewine',
+    },
+
+    'pittsburgh':{
+        'state': 'pennsylvania',
+        'population': '5,681',
+        'govenor': 'smith',
+    },
+}
+
+for city, city_info in cities.items():
+    govenor = f"{city_info['govenor']}"
+    state = f"{city_info['state']}"
+    print(f"\nThe following city, {city.title()}, is located in the state of {state.title()}, with a population of {city_info['population']} and their govenor is {govenor.title()}.")
