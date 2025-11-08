@@ -4,6 +4,7 @@ rental_car = input("What type of rental car would you like? ")
 print(f"Let me see if I can find you a {rental_car}")
 '''
 
+'''
 seating = input("How many are in your dinner party? ")
 
 seating = int(seating)
@@ -16,3 +17,12 @@ if seating > 8:
         print("We are sorry to see you go!")
 else:
     print("Your table will be ready soon!")
+'''
+
+multiple_ten = input("Enter a number: ")
+multiple_ten = int(multiple_ten)
+
+if multiple_ten % 10 == 0:
+    print("Your number is divisible by 10!")
+else:
+    print(f"Your number is: {multiple_ten}")
