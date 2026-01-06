@@ -12,6 +12,9 @@ class Restaurant:
 
     def set_number_served(self, number_served):
         self.number_served = number_served
+    
+    def increment_number_served(self, served):
+        self.number_served += served
 
 
 restaurant = Restaurant('uncle beths', 'bbq')
@@ -26,3 +29,6 @@ print(f"Number of customers served: {restaurant.number_served}")
 
 restaurant.set_number_served(300)
 print(f"Number of customers served: {restaurant.number_served}")
+
+restaurant.increment_number_served(50)
+print(f"Numbered served for the day has caused an increase to: {restaurant.number_served}")
