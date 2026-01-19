@@ -9,6 +9,6 @@ class Restaurant:
     def open_restaurant(self):
         print("The restaurant is open.")
 
-restaurant = Restaurant("McDonalds", "Burgers")
+restaurant = Restaurant("McDonalds", "American")
 print(f"The restaurant {restaurant.restaurant_name} is an American staple.")
 print(f"{restaurant.restaurant_name} cuisine type is {restaurant.cuisine_type}")
