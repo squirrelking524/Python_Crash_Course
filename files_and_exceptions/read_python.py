@@ -5,8 +5,11 @@ contents = path.read_text().rstrip()
 
 print(contents)
 
+'''
 lines = contents.splitlines()
 for line in lines:
-    print("\n")
     print(line)
+'''
 
+for line in contents.splitlines():
+    print(line)
