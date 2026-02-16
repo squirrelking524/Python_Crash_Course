@@ -1,0 +1,4 @@
+In Python you can make data easier to read.
+In Python you can check data by looping through items to see if that item is in that data.
+In Python you can use small amounts of code to repeat large amounts of data.
+In Python you can use data input as part of your program.
