@@ -1,17 +1,14 @@
 from pathlib import Path
 
-while True:
-    guest_need = input("Are you still adding guests? (y/n) ")
+path = Path('guest_book.txt')
 
-    if guest_need == "n":
+print("When you have completed the guest book, type: 'quit'.")
+while True:
+    name = input("What is your name? ")
+    if name.lower() == 'quit':
         break
 
     else:
-        guest_book = ""
-
-        guest_book += input("What is your guest name? ")
-    
-        guest_book += "\n"
-
-path = Path('guest_book.txt')
-path.write_text(guest_book)
+        with open(path, 'a') as f:
+            f.write(f"{name}\n")
+        print(f"{name} has been added to the guest book.")
