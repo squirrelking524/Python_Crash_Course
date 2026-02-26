@@ -16,6 +16,7 @@ def get_new_user(path):
     path.write_text(contents)
     return username
     
+# My original    
 def correct_user(path):    
     username = get_stored_user(path)
     question_user = input(f"Is this your correct username: {username} (y/n)? ")
@@ -23,11 +24,21 @@ def correct_user(path):
         greet_user()
     else:
         username = get_new_user(path)
+        print(f"We will remember you next time you are back, {username}")
 
 def greet_user():
     username = get_stored_user(path)
+    # inspired by other user by using 2 if statments
     if username:
         print(f"Welcome back, {username}")
+        '''
+        correct_user = input(f"Is this your username: {username}? (y/n) ")
+        if correct_user.lower() == 'y':
+            print(f"Welcome back, {username}")
+        else:
+            username = get_new_user(path)
+            print(f"We will remember you next time you are back, {username}")
+            '''
     else:
         username = get_new_user(path)
         print(f"We will remember you next time you are back, {username}")
