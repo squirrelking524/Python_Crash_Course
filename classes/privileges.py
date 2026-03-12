@@ -28,6 +28,7 @@ class Privileges():
         else:
                 print("- This user has no privileges")
 
+'''
 david = Admin('david', 'smith', 'dls000')
 david.describe_user()
 
@@ -58,3 +59,4 @@ alycia_privileges = [
 
 alycia.privileges.privileges = alycia_privileges
 alycia.privileges.show_privileges()
+'''

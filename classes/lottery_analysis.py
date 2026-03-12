@@ -16,6 +16,7 @@ def check_ticket(my_ticket, winning_ticket):
         return False
 
 '''
+# generating a random ticket
 def make_random_ticket(lottery_values):
     ticket = []
 
@@ -29,14 +30,17 @@ def make_random_ticket(lottery_values):
 
 lottery_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'b', 'c', 'd', 'e']
 winning_ticket = get_winning_ticket(lottery_values)
-ticket = [1, 2, 3, 4]
 
 plays = 0
 won = False
 
 max_tries = 1_000_000
 
+# choosing my own ticket numbers
+ticket = [1, 2, 3, 4]
+
 '''
+# checking against random ticket generator
 while not won:
     new_ticket = make_random_ticket(lottery_values)
     won = check_ticket(new_ticket, winning_ticket)
@@ -55,7 +59,7 @@ else:
     print(f"Your ticket: {new_ticket}")
     print(f"Winning ticket: {winning_ticket}")
 '''
-
+# checking based on my own generated ticket
 while not won:
     won = check_ticket(ticket, winning_ticket)
     plays += 1

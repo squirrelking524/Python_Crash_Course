@@ -21,6 +21,7 @@ class Admin(User):
         for privilege in self.privileges:
             print(f'- {privilege}')
 
+'''
 david = Admin('david', 'smith', 'dls000')
 david.describe_user()
 
@@ -31,3 +32,4 @@ david.privileges = [
 ]
 
 david.show_privileges()
+'''

@@ -1,7 +1,7 @@
 def show_messages(text_msgs, sent_msgs):
     while text_msgs:
         text = text_msgs.pop()
-        print(f"Your text message says, '{text}'.")
+        print(f"Your text message says, '{text}.'")
         sent_msgs.append(text)
 
 def show_sent_messages(sent_msgs):
