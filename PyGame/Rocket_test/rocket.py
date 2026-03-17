@@ -17,6 +17,7 @@ class Rocket:
             self._check_events()
 
             pygame.display.flip()
+            self.ship.blitme()
 
     def _check_events(self):
         for event in pygame.event.get():
