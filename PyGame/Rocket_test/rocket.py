@@ -15,6 +15,7 @@ class Rocket:
     def run_game(self):
         while True:
             self._check_events()
+            self.ship.update()
 
             pygame.display.flip()
             self.ship.blitme()
@@ -42,7 +43,6 @@ class Rocket:
                     self.ship.moving_down = False
                 elif event.key == pygame.K_UP:
                     self.ship.moving_up = False
-
 
 if __name__ == '__main__':
     rocket = Rocket()
