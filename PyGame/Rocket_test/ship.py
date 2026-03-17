@@ -24,9 +24,9 @@ class Ship:
         elif self.moving_left:
             self.rect.x -= 1
         elif self.moving_down:
-            self.rect.x += 1
+            self.rect.y += 1
         elif self.moving_up:
-            self.rect.x -= 1
+            self.rect.y -= 1
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)
