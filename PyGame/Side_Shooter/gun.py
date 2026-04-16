@@ -18,10 +18,10 @@ class Gun:
         self.moving_down = False
 
     def update(self):
-        if self.moving_up and self.rect.up < self.screen_rect.up:
-            self.y += self.settings.gun_speed
-        if self.moving_down and self.rect.down > 0:
+        if self.moving_up and self.rect.top > 0:
             self.y -= self.settings.gun_speed
+        if self.moving_down and self.rect.bottom and self.rect.bottom < self.screen_rect.bottom:
+            self.y += self.settings.gun_speed
 
         self.rect.y = self.y
 
