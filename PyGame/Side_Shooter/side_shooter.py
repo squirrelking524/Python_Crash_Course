@@ -1,7 +1,8 @@
 import sys
 import pygame
-from settings import Settings
 
+from settings import Settings
+from gun import Gun
 
 class SideShooter:
     """Manage game assest and behavior"""
@@ -16,9 +17,13 @@ class SideShooter:
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Side Shooter")
 
+        self.gun = Gun(self)
+
     def run_game(self):
         while True:
             self._check_events()
+            self.gun.update()
+            self._update_screen()
             self.clock.tick(60)
 
     def _check_events(self):
@@ -30,8 +35,24 @@ class SideShooter:
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
 
+    def _check_keydown_events(self, event):
+        if event.key == pygame.K_UP:
+            self.gun.moving_up = True
+        elif event.key == pygame.K_DOWN:
+            self.gun.moving_down = True
+        elif event.key == pygame.K_q:
+            sys.exit()
+
+    def _check_keyup_events(self, event):
+        if event.key == pygame.K_UP:
+            self.gun.moving_up = False
+        elif event.key == pygame.K_DOWN:
+            self.gun.moving_down = False
+
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)
+
+        self.gun.blitme()
 
         pygame.display.flip()
 
