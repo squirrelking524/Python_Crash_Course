@@ -10,7 +10,7 @@ class Alien(Sprite):
         self.screen = ai_game.screen
 
         # Load the alien image and set its rect attribute
-        self.image = pygame.image.load('/home/dls013/repos/Python/Python_Crash_Course/PyGame/Alien_Invasion/images/dreadnaught.bmp')
+        self.image = pygame.image.load('images/dreadnaught.bmp')
         self.rect = self.image.get_rect()
 
         # Start each new alien near the top left of the screen
